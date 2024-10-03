@@ -1,0 +1,130 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Insurance Claim Processor - v2",
+    "description": "Insurance Claim Processor",
+    "version": "1.0.0",
+    "x-ibm-annotations": "true",
+    "x-ibm-application-id": "Insurance_Claim_Processor",
+    "x-ibm-application-name": "Insurance Claim Processor",
+    "x-ibm-skill-type": "imported",
+    "x-ibm-application-icon": "<svg>Your Icon SVG</svg>"
+  },
+  "servers": [
+    {
+      "url": "<URL>",
+      "description": "IBM Code Engine deployment for Insurance Claim Processor"
+    }
+  ],
+  "paths": {
+    "/process_claim": {
+      "post": {
+        "summary": "Process an Insurance Claim - v2",
+        "description": "Processes an insurance claim by extracting named entities, generating a summary, and suggesting next actions.",
+        "operationId": "processInsuranceClaim",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "description": {
+                    "type": "string",
+                    "description": "Description of the insurance claim",
+                    "example": "A car accident occurred on Jan 1st, 2023 at 5pm at the intersection of woodbridge."
+                  }
+                },
+                "required": ["description"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Processed claim details",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "Car Model": {
+                      "type": "string",
+                      "description": "Extracted car model from the claim."
+                    },
+                    "Location": {
+                      "type": "string",
+                      "description": "Extracted location of the incident."
+                    },
+                    "Date": {
+                      "type": "string",
+                      "description": "Extracted date of the incident."
+                    },
+                    "Time": {
+                      "type": "string",
+                      "description": "Extracted time of the incident."
+                    },
+                    "Summary": {
+                      "type": "string",
+                      "description": "Generated summary of the claim."
+                    },
+                    "Next Actions": {
+                      "type": "string",
+                      "description": "Recommended next steps for processing the claim."
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string",
+                      "description": "Error message"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "x-ibm-default-namespace": "InsuranceNamespace",
+        "x-ibm-operation": {
+          "verb": "process",
+          "model": "insurance_claim"
+        },
+        "x-ibm-nl-intent-examples": [
+          "process insurance claim",
+          "file insurance claim"
+        ],
+        "x-ibm-nl-entities": {
+          "entities": [
+            {"entity": "car", "values": [], "fuzzy_match": true},
+            {"entity": "date", "values": [], "fuzzy_match": true},
+            {"entity": "location", "values": [], "fuzzy_match": true},
+            {"entity": "time", "values": [], "fuzzy_match": true}
+          ]
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "provider_basic_auth": {
+        "type": "http",
+        "scheme": "basic"
+      }
+    }
+  },
+  "security": [
+    {
+      "provider_basic_auth": []
+    }
+  ]
+}
