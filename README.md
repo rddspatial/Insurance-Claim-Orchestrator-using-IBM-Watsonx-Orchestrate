@@ -1,6 +1,6 @@
-# Insurance-Claim-Orchestrator-using-IBM-Watsonx-Orchestrator-IBM-Watsonx.ai-and-Phoenix-Vela
+# Insurance-Claim-Orchestrator-using-IBM-Watsonx-Orchestrator-IBM-Watsonx.ai-and-On-Prem-Vela
 
-This project demonstrates how to create an LLM pipeline calling IBM Watsonx.ai LLMs hosted on Phoenix Vela (on-prem) and cretae a FastAPI server, which can be deployed on IBM Code Engine or any container execution engine or a VM. Then an OpenAPI spec can be created which can be used to create the skill/skill flow in Watsonx Orchestrate to perform certains tasks, such as, in this case, processing claims and retrieving named entities, creating summary and recommedning next actions. 
+This project demonstrates how to create an LLM pipeline calling IBM Watsonx.ai LLMs hosted on on-prem and cretae a FastAPI server, which can be deployed on IBM Code Engine or any container execution engine or a VM. Then an OpenAPI spec can be created which can be used to create the skill/skill flow in Watsonx Orchestrate to perform certains tasks, such as, in this case, processing claims and retrieving named entities, creating summary and recommedning next actions. 
 
 # Overview of Watsonx Orchestrate, Watsonx.ai, and Vela: 
 
@@ -14,7 +14,7 @@ To learn more about IBM Watsonx.ai please follow https://www.ibm.com/products/wa
 
 # Vela: 
 The on-prem version of Watsonx.ai, installed on Red Hat OpenShift, providing foundation models with capabilities for businesses needing data sovereignty and in-house AI solutions. 
-How to Connect to Phoenix Vela (Kvant platform) and get the credentials: 
+How to Connect to on-prem Vela (Kvant platform) and get the credentials: 
 https://documentation.kvant.cloud/products/kvantai/kvantaiaas/kvantaisandbox/apikey_and_tokens/ 
 
 
