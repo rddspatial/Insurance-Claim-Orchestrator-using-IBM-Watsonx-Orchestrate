@@ -1,6 +1,6 @@
 # Insurance-Claim-Orchestrator-using-IBM-Watsonx-Orchestrator-IBM-Watsonx.ai-and-On-Prem-Vela
 
-This project demonstrates how to create an LLM pipeline calling IBM Watsonx.ai LLMs hosted on on-prem and cretae a FastAPI server, which can be deployed on IBM Code Engine or any container execution engine or a VM. Then an OpenAPI spec can be created which can be used to create the skill/skill flow in Watsonx Orchestrate to perform certains tasks, such as, in this case, processing claims and retrieving named entities, creating summary and recommedning next actions. 
+This project demonstrates how to create an LLM pipeline calling IBM Watsonx.ai LLMs hosted on-prem and create a FastAPI server, which can be deployed on IBM Code Engine or any container execution engine or a VM. Then an OpenAPI spec can be created which can be used to create the skill/skill flow in Watsonx Orchestrate to perform certains tasks, such as, in this case, processing claims and retrieving named entities, creating summary and recommedning next actions. 
 
 # Overview of Watsonx Orchestrate, Watsonx.ai, and Vela: 
 
