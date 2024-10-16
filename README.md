@@ -41,7 +41,11 @@ IBM Watsonx Orchestrate integrates with Watsonx.ai to automate these tasks using
 
   * 3.5. Action Recommendation: Suggests next steps for the claimant based on the details of the claim. 
 
-4. Automated Communication: After processing the claim, a secondary skill "Send Email" is triggered, which composes an email to the claimant. The email includes a summary of the incident, recommended next steps, and any necessary documents. Finally, the system sends the email automatically. For this project, we used a Gmail skill integration. However other mailing services such as Outlook can also be integrated as required. 
+4. Automated Communication: After processing the claim, a secondary skill "Send Email" is triggered, which composes an email to the claimant. The email includes a summary of the incident, recommended next steps, and any necessary documents. Finally, the system sends the email automatically. For this project, we used a Gmail skill integration. However other mailing services such as Outlook can also be integrated as required.
+
+# Architecture diagram
+
+<img width="1512" alt="Screenshot 2024-10-16 at 18 40 06" src="https://github.com/user-attachments/assets/946aa2ef-0650-4836-ac90-cc6f96c6befe">
 
 # Technical Details: 
 
@@ -58,6 +62,8 @@ IBM Watsonx Orchestrate integrates with Watsonx.ai to automate these tasks using
  * For AWS, the IBM Code Engine component could be replaced with AWS Fargate or AWS Lambda. For Azure, Azure Container Apps could serve as the alternative platform for hosting the FastAPI server. This flexibility allows organizations to choose the cloud provider that best suits their operational requirements. 
 
 
-P.S: You need to set the credentials in .env file with the right URLS and credentials and also you need to set the right code engine URL/endpoint in the OpenAPI spec before you could run the code and create the skill for Watsonx Orchestrate.  
+P.S: You need to set the credentials in .env file with the right URLS and credentials and also you need to set the right code engine URL/endpoint in the OpenAPI spec before you could run the code and create the skill for Watsonx Orchestrate. 
+
+
 
 
