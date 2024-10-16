@@ -43,7 +43,7 @@ IBM Watsonx Orchestrate integrates with Watsonx.ai to automate these tasks using
 
 4. Automated Communication: After processing the claim, a secondary skill "Send Email" is triggered, which composes an email to the claimant. The email includes a summary of the incident, recommended next steps, and any necessary documents. Finally, the system sends the email automatically. For this project, we used a Gmail skill integration. However other mailing services such as Outlook can also be integrated as required.
 
-# Architecture diagram
+# Architecture Diagram
 <img width="1512" alt="Screenshot 2024-10-16 at 18 41 52" src="https://github.com/user-attachments/assets/99adb855-93af-48a0-83ad-341e526fc640">
 
 # Technical Details: 
